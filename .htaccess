@@ -1,0 +1,20 @@
+# Turn Rewrite Engine On
+RewriteEngine on
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+# Rewrite for index.php
+RewriteRule ^$ index.php [NC,L]
+
+
+
+# Rewrite2
+RewriteRule ^([0-9a-zA-Z_-]+)$ index.php?b564262e495a2c83cd0134b4ab13c03c=$1 [NC,L]
+
+
+# Rewrite3
+RewriteRule ^loginadmin/([0-9a-zA-Z_-]+)$ admin/index.php?logincheck=$1 [NC,L]
