@@ -93,6 +93,18 @@ class menumaker {
                                        
                                 return $data;
                                    
+            }
+            
+            function getsubmenu($mainid) {
+                
+                                $exe=  exequery();
+
+                                $stmt= $exe->prepare('SELECT * FROM submenu WHERE :main_id ');
+                                $stmt->execute(array('main_id'=>$mainid));
+                                $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                       
+                                return $data;
+                                   
                                 
             }
             

@@ -8,7 +8,7 @@ if(isset($_POST['sub'])){
     
     $r= $makemenu::mainmenumaker($mainmenu);
    
-    $sr=$makemenu->submenumaker(8, "hello home page");
+    $sr=$makemenu->submenumaker(9, "subabout page");
     
     
     if($sr==TRUE):
@@ -36,7 +36,13 @@ foreach ($dta as $d):
     
 endforeach;
 
+$subid=$makemenu->getsubmenu(8);
 
+foreach ($subid as $subm):
+    
+    echo $subm['menu_name'];
+    
+endforeach;
 
 ?>
 
